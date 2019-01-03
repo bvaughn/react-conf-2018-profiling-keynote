@@ -1,0 +1,82 @@
+.App {
+  width: 300px;
+  display: inline-grid;
+  grid-template-areas: "input select" "results results";
+  grid-template-rows: 25px 225px;
+  grid-template-columns: 1fr 100px;
+}
+
+.SearchTextInput {
+  margin-right: 0.5rem;
+  grid-area: input;
+
+  border: 1px solid white;
+  border-radius: 0.25rem;
+}
+.SearchTextInput:focus {
+  outline: none;
+  border: 1px solid #00a8c6;
+}
+
+.NumResultsSelect {
+  grid-area: select;
+
+  border: 1px solid white;
+  border-radius: 0.25rem;
+}
+.NumResultsSelect:focus {
+  outline: none;
+  border: 1px solid #00a8c6;
+}
+
+.List {
+  grid-row: results;
+  grid-column: results;
+  overflow: auto;
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+
+  border: 1px solid #33333c;
+  border-radius: 0.25rem;
+}
+
+.ListItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin: 0;
+  color: #fff;
+}
+
+.ListItem:nth-child(odd) {
+  background-color: #33333c;
+}
+
+.ListItemImage {
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.ListItemLabel {
+  margin-right: 0.5rem;
+}
+
+.ListItemLogin {
+  color: #888;
+}
+
+.ListItemNoResults {
+  padding: 0.5rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.ListItemSpecial {
+  padding: 0.5rem;
+  margin: 0;
+  font-style: italic;
+  color: #888;
+}
